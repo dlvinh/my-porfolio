@@ -5,9 +5,75 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+  color: rgb(247, 247, 247);
+  background-color: #444444;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,h2,h3{
+  margin:0;
+}
+
+h1{
+  font-size: 3.052rem;
+}
+h2{
+  font-size: 2.441rem;
+}
+h3{
+  font-size: 1.953rem;
+}
+p, .svg-inline--fa{
+  font-size: 1.563rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+ul,li{
+  list-style: none;
+  display: inline;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.btn{
+  background-color: #222222;
+  color: white;
+  border: 3px white solid;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn:hover{
+  background-color: #444444;
+  color: white;
+  animation: shaking-btn 1.5s ease-in-out infinite;
+ 
+}
+.active{
+  color: #ffd6a5;
+  transform: scale(1.15);
+}
+
+@keyframes shaking-btn {
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.15);
+    }
+    100%{
+      transform: scale(1);
+    }
 }

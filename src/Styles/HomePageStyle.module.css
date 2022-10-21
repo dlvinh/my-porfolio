@@ -1,0 +1,40 @@
+/* ==== HOME PAGE ===== */
+.home-container{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 50%;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+.home-container .content-area{
+    border-radius: 0;
+    background-color: transparent;
+}
+.home-container .header-content{
+ 
+}
+.home-container .btn-download{
+    width: fit-content;
+    margin-top: 1rem;
+}
+.home-container .avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.home-container .header-content h2{
+    font-size: 3.5rem;
+}
+
+.home-container .header-content h3{
+    font-size: 2rem;
+    font-weight: lighter;
+}
