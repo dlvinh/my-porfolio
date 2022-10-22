@@ -7,24 +7,24 @@ export default function Navbar() {
             <ul>
                 <li >
                     <NavLink to="Home" className={({ isActive }) =>
-                        isActive ? "active" : ""}><i className="fa fa-home"></i><p>Home</p> </NavLink>
+                        isActive ? "active" : ""}><i className="icon fa fa-home"></i><p>Home</p> </NavLink>
                 </li>
                 <li>
-                    <NavLink to="AboutMe"><i class="fa fa-user-alt"></i><p>About Me</p></NavLink>
+                    <NavLink to="AboutMe"><i class="icon fa fa-user-alt"></i><p>About Me</p></NavLink>
                 </li>
                 <li>
-                    <NavLink to="Education"> <i class="fa fa-graduation-cap"></i><p>Education</p></NavLink>
+                    <NavLink to="Education"> <i class="icon fa fa-graduation-cap"></i><p>Education</p></NavLink>
                 </li>
 
                 <li>
                     <NavLink to="Resume">
-                        <i class="fa fa-file-alt"></i><p>Resume</p>
+                        <i class="icon fa fa-file-alt"></i><p>Resume</p>
                     </NavLink>
                 </li>
 
                 <li>
                     <NavLink to="Contact">
-                        <i class="fa fa-envelope"></i><p>Contact</p>
+                        <i class="icon fa fa-envelope"></i><p>Contact</p>
                     </NavLink>
                 </li>
             </ul>

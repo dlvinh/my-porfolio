@@ -1,0 +1,11 @@
+.task-item{
+    max-width: 50%;
+    padding: 0 2rem;
+    margin: 3rem 0;
+}
+.task-item>p{
+    text-align: justify;
+}
+.task-item .icon{
+    font-size: 4rem;
+}
