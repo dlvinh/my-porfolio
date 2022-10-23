@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 export default function Education() {
   return (
-    <div className="education-container">
-          <h3 className='title'>Education</h3>
-          <ul>
+    <Fragment>
+          <ul className='education-container'>
             <li>
               <div className="education-item">
                 <h4>Master of Information Technology</h4>
@@ -27,6 +26,6 @@ export default function Education() {
               </div>
             </li>
           </ul>
-        </div>
+          </Fragment>
   )
 }

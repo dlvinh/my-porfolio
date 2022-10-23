@@ -3,8 +3,8 @@ import React, { Fragment } from "react";
 export default function Experience() {
   return (
     <Fragment>
-        <h3 className="title">Experience & Project</h3>
-        <div className="experience-container d-flex justify-content-around" >
+        
+        <div className="experience-container  d-flex justify-content-between" >
       
       <card className="card my-card-style">
         <div className="card-body d-flex flex-column justify-content-between">
