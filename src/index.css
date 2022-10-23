@@ -29,16 +29,22 @@ h2{
 h3{
   font-size: 1.953rem;
 }
-p, .svg-inline--fa{
+h4{
+  font-size: 1.563rem;
+}
+h5{
+  font-size: 1.25rem;
+}
+p{
+  font-size:  1rem;
+}
+.icon{
   font-size: 1.563rem;
   /* cursor: pointer; */
   transition: all 0.25s;
   margin: 0;
 }
-ul,li{
-  list-style: none;
-  display: inline;
-}
+
 a{
   text-decoration: none;
   color: white;

@@ -21,17 +21,17 @@ export default function AboutMe() {
           </ul>
         </div>
         <div className={`${style["personal-info"]}`}>
-          <p>Current job: Warehouse Assisstant - Toys R Us Anz Limited</p>
-          <p>Age: 28</p>
-          <p>Address: Australia - Melbourne</p>
-          <p>Email: vinhxp95@gmail.com</p>
-          <p>Phone: 0433986789</p>
-          <p>Languages: Vietnamese - English</p>
+          <p><span className="highlighted">Working at </span>Warehouse Assisstant - Toys R Us Anz Limited</p>
+          <p><span className= "highlighted">Age </span>28</p>
+          <p><span className= "highlighted">Address </span>Australia - Melbourne</p>
+          <p><span className= "highlighted">Email </span>vinhxp95@gmail.com</p>
+          <p><span className= "highlighted">Phone </span>0433986789</p>
+          <p><span className= "highlighted">Languages </span>Vietnamese - English</p>
         </div>
       </article>
       <section className="skills mt-5 mb-3">
         <em><h1>Skills</h1></em>
-        <div className="skills-container d-flex mt-4 justify-content-around">
+        <div className={`${style["skills-container"]} d-flex mt-4 justify-content-around`}>
           <img className={`${style['skill-logo']}`} alt="bootstrap" src='./assets/logos/icons8-bootstrap.svg'></img>
           <img className={`${style['skill-logo']}`} alt="bootstrap" src='./assets/logos/icons8-css3.svg'></img>
           <img className={`${style['skill-logo']}`} alt="bootstrap" src='./assets/logos/icons8-figma.svg'></img>
@@ -42,7 +42,7 @@ export default function AboutMe() {
         </div>
       </section>
       <section className="done-task mt-5">
-        <em><h1>What I've done</h1></em>
+        <em><h1>Archivements</h1></em>
       </section>
       <DoneTask></DoneTask>
      

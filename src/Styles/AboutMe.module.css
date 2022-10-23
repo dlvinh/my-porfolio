@@ -30,3 +30,7 @@
 .skill-logo{
     width: 100px;
 }
+.skills-container{
+    background-color: rgb(53 51 51 / 64%);
+    border-radius: 10px;
+}

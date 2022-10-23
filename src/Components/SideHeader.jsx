@@ -9,9 +9,9 @@ export default function SideHeader() {
                 <h2>Duc Vinh Le</h2>
                 <h3>Web Developer</h3>
                 <section className="social-media">
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-instagram"></i>
+                    <i class="icon fab fa-linkedin-in"></i>
+                    <i class="icon fab fa-facebook-f"></i>
+                    <i class="icon fab fa-instagram"></i>
                 </section>
             </div>
             <button className='btn btn-download'>
