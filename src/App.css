@@ -90,10 +90,11 @@
 /* ===== NAVBAR ==== */
 .nav-bar{
     background-color: #222222;
-    width: fit-contents;
+    width: fit-content;
     text-align: center;
     height:100%;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+
 }
 .nav-bar .icon{
     font-size: 2.2rem;
@@ -104,12 +105,13 @@
     justify-content: space-between;
     text-align: center;
     display: inline;
-  
+    padding: 0;
 }
 .nav-bar ul li{
     list-style: none;
     margin: 2rem 0;
     transition: ease-in-out 0.25s;
+    width: 75px;
 }
 .nav-bar li p{
     margin:0;

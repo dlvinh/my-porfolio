@@ -5,7 +5,7 @@ import style from "../Styles/AboutMe.module.css";
 export default function AboutMe() {
   return (
     <section className={`${style["about-me"]}`}>
-         <em><h1>About <span style={{color: "#ffd6a5"}}>Me!</span></h1></em> 
+         <em><h3>About <span style={{color: "#ffd6a5"}}>Me!</span></h3></em> 
       <article
         className={`${style["about-me-article"]}`}>
         <div className={`${style["introduction"]}`}>
@@ -30,7 +30,7 @@ export default function AboutMe() {
         </div>
       </article>
       <section className="skills mt-5 mb-3">
-        <em><h1>Skills</h1></em>
+        <em><h3>Skills</h3></em>
         <div className={`${style["skills-container"]} d-flex mt-4 justify-content-around`}>
           <img className={`${style['skill-logo']}`} alt="bootstrap" src='./assets/logos/icons8-bootstrap.svg'></img>
           <img className={`${style['skill-logo']}`} alt="bootstrap" src='./assets/logos/icons8-css3.svg'></img>
@@ -42,7 +42,7 @@ export default function AboutMe() {
         </div>
       </section>
       <section className="done-task mt-5">
-        <em><h1>Archivements</h1></em>
+        <em><h3>What I do</h3></em>
       </section>
       <DoneTask></DoneTask>
      
