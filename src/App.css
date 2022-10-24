@@ -208,3 +208,76 @@
     background-color: #ffd6a5;
     color: #444444;
 }
+
+/* CONTACT */  
+
+.flip-card{
+    border:1px solid transparent;
+    text-align: center;
+    height: 80px;
+    width: 70%;
+    margin: 1rem 0;
+    cursor: pointer;
+  perspective: 1000px;
+  background-color: transparent;
+} 
+.flip-card-inner{
+position: relative;
+height: 100%;
+width: 100%;
+    text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+.card-front, .card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.card-front{
+    border: 1px solid #b9b3b3;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  background-color: #444444;
+}
+
+.card-back{
+    border: 1px solid #444444;
+    border-radius: 10px;
+    background-color: #b9b3b3;
+    height: 100%;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+
+
+label{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+input,textarea{
+    font-size: 1.025rem;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent
+}
+input:focus, textarea:focus{
+    outline-color: #b9b3b3;
+}
+textarea{
+    height: 100px;
+   
+}
