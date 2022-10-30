@@ -1,7 +1,25 @@
-import React, { Fragment } from 'react'
+import React, { Fragment ,useEffect,useRef, useState} from 'react'
 import style from '../Styles/HomePageStyle.module.css';
-
-export default function Home() {
+import { ref,getDownloadURL } from "firebase/storage";
+export default function Home({storage,app}) {
+  
+    const [urlState,setUrlState]=  useState("");
+    useEffect(() => {
+        console.log("run useEffect")
+        const getURl = async()=>{
+            try{
+                const url = await getDownloadURL(ref(storage, 'Resume-DucVinhLe.pdf'));
+                console.log(url);
+                setUrlState(url)
+             
+            }catch(error){
+                console.log(error);
+            }
+        }
+        getURl();
+    }, [])
+    
+   
     return (
         <Fragment>
             <section className={style["home-container"]}>
@@ -11,15 +29,15 @@ export default function Home() {
                     <h4 className='my-4 font-weight-light'>Web Developer</h4>
                     <section className={style['content']}>
                         <section className="social-media">
-                            <i class="icon fab fa-linkedin-in"></i>
-                            <i class="icon fab fa-facebook-f"></i>
-                            <i class="icon fab fa-instagram"></i>
+                           <a href="https://linkedin.com/in/duc-vinh-le-76ba091aa" target="_blank" rel="noopener noreferrer" > <i className="icon fab fa-linkedin-in"></i></a>
+                            <a href="http://m.me/ducvinh.le.39"  target="_blank" rel="noopener noreferrer" ><i className="icon fab fa-facebook-f"></i></a>
+                            <a href='https://www.instagram.com/leevinh_195' target="_blank" rel="noopener noreferrer" ><i className="icon fab fa-instagram"></i></a> 
                         </section>
                     </section>
                 </div>
-                <button className={`btn ${style["btn-download"]} my-4`}>
+                <a target="_blank" rel="noopener noreferrer" href={urlState} className={`btn ${style["btn-download"]} my-4`}>
                     Download My CV
-                </button>
+                </a>
             </section>
         </Fragment>
     )

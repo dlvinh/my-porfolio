@@ -1,6 +1,23 @@
-import React, { Fragment } from 'react'
+import { getDownloadURL, ref } from 'firebase/storage';
+import React, { Fragment, useEffect, useState } from 'react'
 
-export default function SideHeader() {
+export default function SideHeader({storage,app}) {
+    const [urlState,setUrlState]=  useState("");
+    useEffect(() => {
+        console.log("run useEffect")
+        const getURl = async()=>{
+            try{
+                const url = await getDownloadURL(ref(storage, 'Resume-DucVinhLe.pdf'));
+                console.log(url);
+                setUrlState(url)
+             
+            }catch(error){
+                console.log(error);
+            }
+        }
+        getURl();
+    }, [])
+    
     return (
         <Fragment>
         <section className="side-header">
@@ -9,14 +26,14 @@ export default function SideHeader() {
                 <h2>Duc Vinh Le</h2>
                 <h3>Web Developer</h3>
                 <section className="social-media">
-                    <i class="icon fab fa-linkedin-in"></i>
-                    <i class="icon fab fa-facebook-f"></i>
-                    <i class="icon fab fa-instagram"></i>
-                </section>
+                           <a href="https://linkedin.com/in/duc-vinh-le-76ba091aa" target="_blank" rel="noopener noreferrer" > <i className="icon fab fa-linkedin-in"></i></a>
+                            <a href="http://m.me/ducvinh.le.39"  target="_blank" rel="noopener noreferrer" ><i className="icon fab fa-facebook-f"></i></a>
+                            <a href='https://www.instagram.com/leevinh_195' target="_blank" rel="noopener noreferrer" ><i className="icon fab fa-instagram"></i></a> 
+                        </section>
             </div>
-            <button className='btn btn-download'>
+            <a target="_blank" rel="noopener noreferrer" href={urlState} className='btn btn-download'>
                 Download My CV
-            </button>
+            </a>
         </section>
        </Fragment>
     )

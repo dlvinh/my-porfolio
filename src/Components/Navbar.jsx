@@ -16,21 +16,21 @@ export default function Navbar() {
         </li>
         <li>
           <NavLink to="AboutMe">
-            <i class="icon fa fa-user-alt"></i>
+            <i className="icon fa fa-user-alt"></i>
             <p>About Me</p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="Resume">
-            <i class="icon fa fa-file-alt"></i>
+            <i className="icon fa fa-file-alt"></i>
             <p>Resume</p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="Contact">
-            <i class="icon fa fa-envelope"></i>
+            <i className="icon fa fa-envelope"></i>
             <p>Contact</p>
           </NavLink>
         </li>
