@@ -1,8 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import DoneTask from "../Components/DoneTask";
+import Carousel from "../Layout/Carousel";
 import style from "../Styles/AboutMe.module.css";
 
+
 export default function AboutMe() {
+  
   return (
     <section className={`${style["about-me"]}`}>
       <em>
@@ -96,14 +99,14 @@ export default function AboutMe() {
         </em>
       </section>
       <DoneTask></DoneTask>
-      <figure>
-        <blockquote class="blockquote">
-          <p>A well-known quote, contained in a blockquote element.</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </figcaption>
-      </figure>
+
+      {/* CAROUSEL */}
+      <em>
+        <h3>Endorsements</h3>
+      </em>
+      <div>
+       <Carousel></Carousel>
+      </div>
     </section>
   );
 }

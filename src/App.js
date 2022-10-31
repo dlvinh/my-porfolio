@@ -8,7 +8,10 @@ import Resume from "./Pages/Resume";
 import Contact from "./Pages/Contact";
 import SideContent from "./Layout/SideContent";
 import { initializeApp } from 'firebase/app';
-import { getStorage,ref,getDownloadURL } from "firebase/storage";
+import { getStorage } from "firebase/storage";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   const firebaseConfig = {
     apiKey: "AIzaSyAOibuMGy20qP4YuX8zhJXC8xLYGwQc5Lc",

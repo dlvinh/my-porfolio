@@ -1,6 +1,7 @@
-import React, { Fragment ,useEffect,useRef, useState} from 'react'
+import React, { Fragment ,useEffect, useState} from 'react'
 import style from '../Styles/HomePageStyle.module.css';
 import { ref,getDownloadURL } from "firebase/storage";
+
 export default function Home({storage,app}) {
   
     const [urlState,setUrlState]=  useState("");
