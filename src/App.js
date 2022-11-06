@@ -11,6 +11,8 @@ import { initializeApp } from 'firebase/app';
 import { getStorage } from "firebase/storage";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import  MyForm  from "./Pages/MyForm";
+import Loading from "./Utilities/Loading";
 
 function App() {
   const firebaseConfig = {
@@ -31,7 +33,9 @@ function App() {
   
 
   return (
+    
     <Routes>
+      
       <Route element={<Layout firebaseApp={app} storage={storage} ></Layout>}>
         <Route path="*" element={<Navigate to="/home"></Navigate>}></Route>
         <Route path="/Home" element={<Home firebaseApp={app} storage={storage} ></Home>}></Route>
