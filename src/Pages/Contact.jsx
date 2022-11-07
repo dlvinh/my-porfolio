@@ -14,7 +14,7 @@ export default function Contact() {
           className="d-inline-block m-5"
           bg="success"
           onClose={()=>{
-            setShow(show);
+            setShow(false);
           }} show={state.succeeded} delay={3000}
           animation="true"
         
@@ -43,8 +43,8 @@ export default function Contact() {
     <Fragment>
     
       
-    <section className='container contact-container'>
-      <h4 className='mb-5'>Contact Me</h4>
+    <section className='container contact-container mt-3'>
+      <em><h3 className='mb-5 title'>Contact <span className='title__secondary'>Me!</span></h3></em>
       <div className='row'>
       <div className="contact-left col-4 d-flex flex-column justify-content-center align-items-center">
         <div className='flip-card'>
@@ -79,7 +79,6 @@ export default function Contact() {
         </div>
       </div>
       <div className='contact-right col-8'>
-        <h3>Send me message</h3>
         <form className='d-flex flex-column' onSubmit={handleSubmit}>
           <label for="name">Name</label>
           <input type="text" id='name' name='name' placeholder='Name' required></input>

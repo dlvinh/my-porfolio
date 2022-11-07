@@ -5,9 +5,9 @@ export default function Quote() {
     <div className="blockquote-wrapper">
         <div className="blockquote">
           <h1>
-            Intuitive design happens when{" "}
-            <span style={{ color: "#ffffff" }}>current knowledge Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio sequi fugit et architecto aliquam. Quas dolorum voluptatum asperiores totam dolorem!</span> is
-            the same as the{" "}
+            <span className="highlighted">Intuitive design happens when{" "}</span>
+            <span style={{ color: "#ffffff" }}>current knowledge Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio sequi fugit et architecto aliquam. Quas dolorum voluptatum asperiores totam dolorem!</span> <span className="highlighted">is
+            the same as the{" "}</span>
             <span style={{ color: "#ffffff" }}>target knowledge.</span>
           </h1>
           <h4>

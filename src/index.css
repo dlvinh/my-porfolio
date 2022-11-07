@@ -52,10 +52,11 @@ p{
   margin: 0;
 }
 
-a{
+a, a:hover{
   text-decoration: none;
   color: white;
 }
+
 
 .btn{
   background-color: #222222;

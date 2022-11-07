@@ -3,7 +3,7 @@
 }
 .about-me p, .about-me ul{ 
     font-size: 1.2rem;
-    line-height: 2;
+    line-height: 2.2;
     word-spacing: 2.5px;
 }
 .about-me-article {
@@ -14,19 +14,6 @@
 .about-me-article .introduction{
     margin-right: 10rem ;
 }
-.introduction ul{
-    padding: 0;
-    display: block;
-    list-style-type:circle;
-}
-.introduction ul li{
-    display: block;
-   
-}
-.personal-info p{
-    margin: 0;
-}
-
 .skill-logo{
     width: 100px;
 }

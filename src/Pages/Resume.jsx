@@ -6,25 +6,25 @@ import Skills from "../Components/Skills";
 
 export default function Resume() {
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="row">
         <div className="col">
-          <h4 className="mb-3 title">Education</h4>
+          <em><h4 className="mb-3 title title__secondary">Education</h4></em>
           <Education></Education>
         </div>
         <div className="col">
           <div className="technical-skill-container">
-            <h4 className="mb-3 title">Technical Skills</h4>
+            <h4 className="mb-3 title">Technical <span className="title__secondary">Skills</span></h4>
             <Skills></Skills>
           </div>
           <div className="soft-skills">
-            <h3 className="mb-3">Knowledge</h3>
+           <em><h3 className="mb-3">Knowledge</h3></em> 
             <Knowledge></Knowledge>
           </div>
         </div>
       </div>
       <div className="row">
-      <h4 className="title">Experience & Project</h4>
+     <em> <h3 className="title">Experience & <span className="title__secondary">Project</span></h3></em>
         <Experience></Experience>
       </div>
     </div>
