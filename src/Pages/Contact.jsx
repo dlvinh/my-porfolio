@@ -15,7 +15,7 @@ export default function Contact() {
           bg="success"
           onClose={()=>{
             setShow(false);
-          }} show={state.succeeded} delay={3000}
+          }} show={show} delay={3000}
           animation="true"
         
         >
