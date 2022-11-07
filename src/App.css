@@ -81,6 +81,7 @@
     height: 100vh;
     overflow: scroll;
     overflow-x: hidden;
+    position: relative;
 }
 
 .content-area::-webkit-scrollbar{
@@ -401,10 +402,11 @@ textarea{
  /* Blockquote main style */
  .blockquote {
      position: relative;
-     font-family: 'Barlow Condensed', sans-serif;
+     font-family: 'Handlee', cursive;
      max-width: 100%;
      margin:  0;
      align-self: center;
+     letter-spacing:1.2px;
  }
  
  /* Blockquote header */
@@ -492,3 +494,24 @@ textarea{
     z-index: 2;
  }
  
+
+ /* FORM */
+.form-success{
+    position: absolute;
+    transform: translate(50%,-50%);
+    top:50%;
+    right: 50%;
+    text-align: center;
+    font-family: 'Handlee', cursive;
+    width: 100%;
+ }
+ .form-success h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+ }
+ .form-success h3{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 20px;
+ }

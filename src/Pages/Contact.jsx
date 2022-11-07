@@ -7,16 +7,14 @@ export default function Contact() {
   const [state, handleSubmit,resetFunction ] = useForm("xnqroeoq");
 
   const [show, setShow] = useState(true);
- 
-  return (
-    <Fragment>
-      <ToastContainer position='top-center'>
+  if (state.succeeded){
+    return <section className='container contact-container'>
+        <ToastContainer position='top-center'>
       <Toast
-          className="d-inline-block m-1"
+          className="d-inline-block m-5"
           bg="success"
           onClose={()=>{
-            setShow(false);
-            resetFunction();
+            setShow(show);
           }} show={state.succeeded} delay={3000}
           animation="true"
         
@@ -35,6 +33,15 @@ export default function Contact() {
           </Toast.Body>
         </Toast>
       </ToastContainer>
+    <div className="form-success">
+      <h1>Thank you for contacting me</h1>
+      <h3>I'll be right back</h3>
+    </div>
+    </section> 
+  }
+  return (
+    <Fragment>
+    
       
     <section className='container contact-container'>
       <h4 className='mb-5'>Contact Me</h4>
@@ -49,9 +56,7 @@ export default function Contact() {
             <p>Melbourne Australia</p>
            </div>
           </div>
-         
         </div>
-        
         <div className='flip-card'>
         <div className='flip-card-inner'>
           <div className='card-front'>
@@ -77,18 +82,18 @@ export default function Contact() {
         <h3>Send me message</h3>
         <form className='d-flex flex-column' onSubmit={handleSubmit}>
           <label for="name">Name</label>
-          <input type="text" id='name' name='name' placeholder='Name'></input>
+          <input type="text" id='name' name='name' placeholder='Name' required></input>
           <label for='email'>Email</label>
-          <input type="email" id="email" name="email" placeholder="Email"></input>
+          <input type="email" id="email" name="email" placeholder="Email" required></input>
           <ValidationError 
         prefix="Email" 
         field="email"
         errors={state.errors}
       />
           <label for="subject">Subject</label>
-          <input type="text" id='subject' name='subject' placeholder="Subject"></input>
+          <input type="text" id='subject' name='subject' placeholder="Subject" required></input>
           <label for='message'>Mesage</label>
-          <textarea type='text' id="message" name='message' placeholder='Leave your message'></textarea>
+          <textarea type='text' id="message" name='message' placeholder='Leave your message' required></textarea>
           <ValidationError 
         prefix="Message" 
         field="message"
