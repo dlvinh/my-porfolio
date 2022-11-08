@@ -2,7 +2,8 @@ import React, { Fragment, useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react';
 import Spinner from 'react-bootstrap/Spinner';
 import Toast from 'react-bootstrap/Toast';
-import ToastContainer from 'react-bootstrap/ToastContainer'
+import ToastContainer from 'react-bootstrap/ToastContainer';
+import { motion } from "framer-motion";
 export default function Contact() {
   const [state, handleSubmit,resetFunction ] = useForm("xnqroeoq");
 
@@ -40,10 +41,25 @@ export default function Contact() {
     </section> 
   }
   return (
-    <Fragment>
-    
-      
-    <section className='container contact-container mt-3'>
+
+    <motion.section 
+      className='container contact-container mt-3'
+      initial={{
+        y:300,
+        opacity:0,
+        scale: [0.2],
+      }}
+      animate={{
+        y:0, 
+        opacity:1,
+        transition: {duration: 1.5},
+        scale: 1
+      }}
+      exit={{opacity: 0,
+        y:300,
+        scale: 0.5,
+      }}
+      >
       <em><h3 className='mb-5 title'>Contact <span className='title__secondary'>Me!</span></h3></em>
       <div className='row'>
       <div className="contact-left col-4 d-flex flex-column justify-content-center align-items-center">
@@ -102,8 +118,7 @@ export default function Contact() {
         </form>
       </div>
       </div>
-    </section>
-    </Fragment>
+    </motion.section>
 
   )
 }

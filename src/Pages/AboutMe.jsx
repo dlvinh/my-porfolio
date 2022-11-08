@@ -3,11 +3,29 @@ import { Link } from "react-router-dom";
 import DoneTask from "../Components/DoneTask";
 import Carousel from "../Layout/Carousel";
 import style from "../Styles/AboutMe.module.css";
-import Contact from "./Contact";
+import { motion } from "framer-motion";
 
 export default function AboutMe() {
   return (
-    <section className={`${style["about-me"]}`}>
+    <motion.section 
+      className={`${style["about-me"]}`}
+      initial={{
+        y:300,
+        opacity:0,
+        scale: [0.2],
+      }}
+      animate={{
+        y:0, 
+        opacity:1,
+        transition: {duration: 1},
+        scale: 1
+      }}
+      exit={{opacity: 0,
+        y:300,
+        scale: 0.2,
+      }}
+      
+    >
       <em>
         <h3 className="title">
           About <span className="title__secondary">Me!</span>
@@ -116,6 +134,6 @@ export default function AboutMe() {
       <div>
         <Carousel></Carousel>
       </div>
-    </section>
+    </motion.section>
   );
 }

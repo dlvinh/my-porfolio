@@ -1,6 +1,6 @@
 import { getDownloadURL, ref } from 'firebase/storage';
-import React, { Fragment, useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { motion ,usePresence} from "framer-motion";
 export default function SideHeader({storage,app}) {
     const [urlState,setUrlState]=  useState("");
     useEffect(() => {
@@ -19,8 +19,19 @@ export default function SideHeader({storage,app}) {
     }, [])
     
     return (
-        <Fragment>
-        <section className="side-header">
+
+        <motion.section 
+            className="side-header"
+            initial={{
+                opacity:0,
+                
+              }}
+              animate={{
+                opacity:1,
+                transition: { ease: "backInOut", duration: 1.2}
+              }}
+              exit={{opacity: 0,}}
+        >
             <div className='side-header-container'>
             <img className="avatar mb-5" alt="..." src='https://images.unsplash.com/photo-1665427803235-8e295131ad29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' />
             <div className="header-content">
@@ -36,8 +47,7 @@ export default function SideHeader({storage,app}) {
                 Download My CV
             </a>
             </div>
-           
-        </section>
-       </Fragment>
+          
+       </motion.section>
     )
 }

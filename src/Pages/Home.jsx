@@ -1,6 +1,7 @@
 import React, { Fragment ,useEffect, useState} from 'react'
 import style from '../Styles/HomePageStyle.module.css';
 import { ref,getDownloadURL } from "firebase/storage";
+import { motion } from 'framer-motion';
 
 export default function Home({storage,app}) {
   
@@ -18,12 +19,24 @@ export default function Home({storage,app}) {
             }
         }
         getURl();
-    }, [])
+    }, []);
+
     
    
     return (
-        <Fragment>
-            <section className={style["home-container"]}>
+            <motion.section 
+                className={style["home-container"]}
+                initial={{
+                    opacity:0,
+                  }}
+                  animate={{
+                    opacity:1,
+                    transition: {duration: 1}
+                  }}
+                  exit={{
+                    opacity: 0,
+                  }}
+            >
                 <img className={style['avatar']} alt="..." src='https://images.unsplash.com/photo-1665427803235-8e295131ad29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' />
                 <div className={`{style["header-content"]}`}>
                     <h2 className='my-4'>Duc Vinh Le</h2>
@@ -39,7 +52,6 @@ export default function Home({storage,app}) {
                 <a target="_blank" rel="noopener noreferrer" href={urlState} className={`btn ${style["btn-download"]} my-4`}>
                     Download My CV
                 </a>
-            </section>
-        </Fragment>
+            </motion.section>
     )
 }

@@ -3,10 +3,29 @@ import Education from "../Components/Education";
 import Experience from "../Components/Experience";
 import Knowledge from "../Components/Knowledge";
 import Skills from "../Components/Skills";
-
+import { motion } from "framer-motion";
 export default function Resume() {
   return (
-    <div className="container mt-3">
+
+    <motion.div 
+      className="container mt-3"
+      initial={{
+        y:300,
+        opacity:0,
+        scale: [0.2],
+      }}
+      animate={{
+        y:0, 
+        opacity:1,
+        transition: {duration: 1.5},
+        scale: 1
+      }}
+      exit={{opacity: 0,
+        y:300,
+        scale: 0.5,
+        }}
+    >
+      
       <div className="row">
         <div className="col">
           <em><h4 className="mb-3 title title__secondary">Education</h4></em>
@@ -27,6 +46,6 @@ export default function Resume() {
      <em> <h3 className="title">Experience & <span className="title__secondary">Project</span></h3></em>
         <Experience></Experience>
       </div>
-    </div>
+    </motion.div>
   );
 }
