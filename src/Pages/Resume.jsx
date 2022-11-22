@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Education from "../Components/Education";
 import Experience from "../Components/Experience";
 import Knowledge from "../Components/Knowledge";
 import Skills from "../Components/Skills";
 import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { initialFirebaseApp } from "../Services/FirebaseService";
 export default function Resume() {
   return (
 
