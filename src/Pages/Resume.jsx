@@ -30,22 +30,25 @@ export default function Resume() {
       
       <div className="row">
         <div className="col">
-          <em><h4 className="mb-3 title title__secondary">Education</h4></em>
+          <em><h4 className="mb-3 title  text--highlighted underline">Education</h4></em>
           <Education></Education>
         </div>
         <div className="col">
           <div className="technical-skill-container">
-            <h4 className="mb-3 title">Technical <span className="title__secondary">Skills</span></h4>
+            <em>
+            <h3 className="mb-3 title text--highlighted underline">Technical <span className="text--highlighted">Skills</span></h3>
+            </em>
+           
             <Skills></Skills>
           </div>
-          <div className="soft-skills">
-           <em><h3 className="mb-3">Knowledge</h3></em> 
+          <div className="soft-skills mt-5">
+           <em><h3 className="mb-3 title text--highlighted underline">Knowledge</h3></em> 
             <Knowledge></Knowledge>
           </div>
         </div>
       </div>
       <div className="row">
-     <em> <h3 className="title">Experience & <span className="title__secondary">Project</span></h3></em>
+     <em> <h3 className="title text--highlighted underline">Experience & <span className="title__secondary">Project</span></h3></em>
         <Experience></Experience>
       </div>
     </motion.div>

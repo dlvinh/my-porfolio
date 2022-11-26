@@ -60,23 +60,23 @@ export default function Contact() {
         scale: 0.5,
       }}
       >
-      <em><h3 className='mb-5 title'>Contact <span className='title__secondary'>Me!</span></h3></em>
+      <em><h3 className='mb-5 title title--large underline'>Contact <span className='title title--large text--highlighted'>Me!</span></h3></em>
       <div className='row'>
       <div className="contact-left col-4 d-flex flex-column justify-content-center align-items-center">
         <div className='flip-card'>
           <div className='flip-card-inner'>
           <div className='card-front'>
-          <h4>Address</h4>
+          <h4 className='title m-0 '>Address</h4>
           </div>
            <div className='card-back'>
-            <p>Melbourne Australia</p>
+            <p className=''>Melbourne Australia</p>
            </div>
           </div>
         </div>
         <div className='flip-card'>
         <div className='flip-card-inner'>
           <div className='card-front'>
-          <h4>Phone</h4>
+          <h4 className='title m-0'>Phone</h4>
           </div>
            <div className='card-back'>
             <p>+61 433906789</p>
@@ -86,7 +86,7 @@ export default function Contact() {
         <div className='flip-card'>
         <div className='flip-card-inner'>
           <div className='card-front'>
-          <h4>Email</h4>
+          <h4 className='title m-0'>Email</h4>
           </div>
            <div className='card-back'>
             <p>vinhxp95@gmai.com</p>
@@ -97,24 +97,24 @@ export default function Contact() {
       <div className='contact-right col-8'>
         <form className='d-flex flex-column' onSubmit={handleSubmit}>
           <label for="name">Name</label>
-          <input type="text" id='name' name='name' placeholder='Name' required></input>
+          <input type="text" id='name' name='name' placeholder='Please enter your name' required></input>
           <label for='email'>Email</label>
-          <input type="email" id="email" name="email" placeholder="Email" required></input>
+          <input type="email" id="email" name="email" placeholder="Please enter your email" required></input>
           <ValidationError 
         prefix="Email" 
         field="email"
         errors={state.errors}
       />
           <label for="subject">Subject</label>
-          <input type="text" id='subject' name='subject' placeholder="Subject" required></input>
+          <input type="text" id='subject' name='subject' placeholder="Please enter your subject" required></input>
           <label for='message'>Mesage</label>
-          <textarea type='text' id="message" name='message' placeholder='Leave your message' required></textarea>
+          <textarea type='text' id="message" name='message' placeholder='Please leave your messages here' required></textarea>
           <ValidationError 
         prefix="Message" 
         field="message"
         errors={state.errors}
       />
-          <button type='submit' disabled={state.submitting} className='btn mt-3'>{state.submitting? <><Spinner animation="border"  variant="info" size="md" /><p className='text-info'>Sending...</p></> : "Send Message"}</button>
+          <button type='submit' disabled={state.submitting} className='my-btn effect--sending border-running-effect mt-3 m-auto btn--small'>{state.submitting? <><Spinner animation="border"  variant="info" size="md" /><p className='text-info'>Sending...</p></> : "Send Message"}</button>
         </form>
       </div>
       </div>

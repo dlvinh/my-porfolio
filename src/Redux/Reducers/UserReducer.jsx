@@ -2,7 +2,15 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const defaultUserState ={
     image: "",
-    resume: ""
+    resume: "",
+    userInfo:{
+        currentJob: "",
+        userAddress: "",
+        userAge: "",
+        userEmail:"",
+        userLanguages: [],
+        userName: ""
+    }
 }
 
 export const UserStateReducer = createSlice({
@@ -18,6 +26,14 @@ export const UserStateReducer = createSlice({
                 resume: action.payload.resume
             };
         },
+        storeUserInfo(state, action){
+            console.log("Store User Info", action);
+            
+            return state = {
+                ...state,
+                userInfo: action.payload
+            }
+        }
         //===== DECLARE ACTIONs HERE
     }
 })

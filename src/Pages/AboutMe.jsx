@@ -4,35 +4,41 @@ import DoneTask from "../Components/DoneTask";
 import Carousel from "../Layout/Carousel";
 import style from "../Styles/AboutMe.module.css";
 import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getUserInfo } from "../Services/FirebaseService";
 
 export default function AboutMe() {
+  const { userInfo } = useSelector((state) => {
+    return state.UserState;
+  });
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUserInfo());
+  }, []);
   return (
-    <motion.section 
-      className={`${style["about-me"]}`}
+    <motion.section
+      className="about-me"
       initial={{
-        y:300,
-        opacity:0,
+        y: 300,
+        opacity: 0,
         scale: [0.2],
       }}
       animate={{
-        y:0, 
-        opacity:1,
-        transition: {duration: 1},
-        scale: 1
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1 },
+        scale: 1,
       }}
-      exit={{opacity: 0,
-        y:300,
-        scale: 0.2,
-      }}
-      
+      exit={{ opacity: 0, y: 300, scale: 0.2 }}
     >
       <em>
-        <h3 className="title">
-          About <span className="title__secondary">Me!</span>
+        <h3 className="title title--large underline">
+          About <span className="text--highlighted">Me !</span>
         </h3>
       </em>
-      <article className={`${style["about-me-article"]}`}>
-        <div className={`${style["introduction"]}`}>
+      <article className="about-me-article">
+        <div className="introduction">
           <ul>
             <li>
               I'm graduated{" "}
@@ -51,70 +57,78 @@ export default function AboutMe() {
             </li>
           </ul>
         </div>
-        <div className={`${style["personal-info"]}`}>
+        <div className="personal__info">
           <ul>
             <li>
-              <span className="highlighted">Working at </span>Warehouse
-              Assisstant - Toys R Us Anz Limited
+              <span className="text--highlighted ">Working at </span>
+              {userInfo.currentJob}
             </li>
             <li>
-              <span className="highlighted">Age </span>28
+              <span className="text--highlighted">Age </span>
+              {userInfo.userAge}
             </li>
             <li>
-              <span className="highlighted">Address </span>Australia - Melbourne
+              <span className="text--highlighted">Address </span>
+              {userInfo.userAddress}
             </li>
             <li>
-              <span className="highlighted">Email </span><Link to="/Contact">vinhxp95@gmail.com</Link>
+              <span className="text--highlighted">Email </span>
+              <Link className="hyperlink" to="/Contact">
+                {userInfo.userEmail}
+              </Link>
             </li>
             <li>
-              <span className="highlighted">Phone </span>0433986789
+              <span className="text--highlighted">Phone </span>
+              {userInfo.userPhone}
             </li>
             <li>
-              <span className="highlighted">Languages </span>Vietnamese -
-              English
+              <span className="text--highlighted">Languages </span>
+              {userInfo.userLanguages?.map((language, index) => {
+                return language + " ";
+              })}
             </li>
           </ul>
         </div>
       </article>
       <section className="skills mt-5 mb-3">
-        <em >
-          <h3 className="title">Skills</h3>
+        <em>
+          <h3 className="text--highlighted title underline title--large">
+            Skills
+          </h3>
         </em>
-        <div
-          className={`${style["skills-container"]} d-flex mt-4 justify-content-around`}
-        >
+        <div className={"skills-container d-flex mt-4 justify-content-around"}>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-bootstrap.svg"
           ></img>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-css3.svg"
           ></img>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-figma.svg"
           ></img>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-html-5.svg"
           ></img>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-javascript.svg"
           ></img>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-react.svg"
           ></img>
           <img
-            className={`${style["skill-logo"]}`}
+            className="skill-logo"
             alt="bootstrap"
             src="./assets/logos/icons8-redux.svg"
           ></img>
@@ -122,18 +136,21 @@ export default function AboutMe() {
       </section>
       <section className="done-task mt-5">
         <em>
-          <h3 className="title">What <span className="title__secondary">I do</span></h3>
+          <h3 className="title underline text--highlighted title--large">
+            What <span className="title__secondary">I do</span>
+          </h3>
         </em>
       </section>
       <DoneTask></DoneTask>
 
       {/* CAROUSEL */}
       <em>
-        <h3 className="title">Endorsements</h3>
+        <h3 className="title title--large underline text--highlighted">
+          Endorsements
+        </h3>
       </em>
-      <div>
-        <Carousel></Carousel>
-      </div>
+
+      <Carousel></Carousel>
     </motion.section>
   );
 }

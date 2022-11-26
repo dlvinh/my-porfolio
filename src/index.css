@@ -6,9 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
-  color: rgb(247, 247, 247);
-  background-color: #444444;
+  color: #003049;
   box-sizing: border-box;
+  background: rgb(255,191,105);
+  background: linear-gradient(180deg, var(--primary-background-color) 25%, var(--secondary-background-color) 85%);
 }
 
 body::-webkit-scrollbar{
@@ -45,52 +46,9 @@ h5{
 p{
   font-size:  1rem;
 }
-.icon{
-  font-size: 1.563rem;
-  /* cursor: pointer; */
-  transition: all 0.25s;
-  margin: 0;
-}
-
-a, a:hover{
+a{
   text-decoration: none;
-  color: white;
 }
-
-
-.btn{
-  background-color: #222222;
-  color: white;
-  border: 3px white solid;
-  width: auto;
-  height: auto;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.25s;
-}
-.btn:hover{
-  background-color: #444444;
-  color: white;
-  animation: shaking-btn 1.5s ease-in-out infinite;
-  border-color: white;
- 
-}
-.active{
-  color: #ffd6a5;
-  transform: scale(1.15);
-}
-
-@keyframes shaking-btn {
-    0%{
-      transform: scale(1);
-    }
-    50%{
-      transform: scale(1.15);
-    }
-    100%{
-      transform: scale(1);
-    }
+a:hover{
+  color: #fff;
 }
