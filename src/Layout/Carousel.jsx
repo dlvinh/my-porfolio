@@ -50,7 +50,6 @@ export default function Carousel() {
     <div>
         <Quote></Quote>
     </div>
-
     <div>
     <Quote></Quote>
     </div>

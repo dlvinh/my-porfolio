@@ -41,9 +41,7 @@ export default function AboutMe() {
         <div className="introduction">
           <ul>
             <li>
-              I'm graduated{" "}
-              <em className="emphasis">Master of Information Technology</em> in{" "}
-              Monash University Australia
+              <em className="emphasis">Nearly One year</em> in developing <em className="emphasis">FrontEnd</em> with <em className="emphasis">React JS</em>
             </li>
             <li>
               My passion is{" "}
@@ -55,6 +53,13 @@ export default function AboutMe() {
               <em className="emphasis">Software Engineer</em> and{" "}
               <em className="emphasis">Fullstack developer</em>
             </li>
+            <li>
+              I'm graduated{" "}
+              <em className="emphasis">Master of Information Technology</em> in{" "}
+              Monash University Australia
+            </li>
+           
+           
           </ul>
         </div>
         <div className="personal__info">

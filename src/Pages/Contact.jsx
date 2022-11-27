@@ -10,30 +10,6 @@ export default function Contact() {
   const [show, setShow] = useState(true);
   if (state.succeeded){
     return <section className='container contact-container'>
-        <ToastContainer position='top-center'>
-      <Toast
-          className="d-inline-block m-5"
-          bg="success"
-          onClose={()=>{
-            setShow(false);
-          }} show={show} delay={3000}
-          animation="true"
-        
-        >
-          <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded me-2"
-              alt=""
-            />
-            <strong className="me-auto">Bootstrap</strong>
-            <small>11 mins ago</small>
-          </Toast.Header>
-          <Toast.Body className={'text-white'}>
-            Hello, world! This is a toast message.
-          </Toast.Body>
-        </Toast>
-      </ToastContainer>
     <div className="form-success">
       <h1>Thank you for contacting me</h1>
       <h3>I'll be right back</h3>

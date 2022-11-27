@@ -24,7 +24,7 @@ export default function Home() {
 
     return (
         <motion.section
-            className="home-container"
+            className="home__container"
             initial={{
                 opacity: 0,
             }}
@@ -41,10 +41,30 @@ export default function Home() {
                 alt="This is my avatar"
                 src={image}
             />
-            <div>
-                <h1 className="my-4 title">Duc Vinh Le</h1>
+            <div className="home__middle">
+                <h1 className="my-4 title partial--border">Duc Vinh Le</h1>
                 <h4 className="my-4 font-weight-light subtitle">
-                   Software Engineer | Web Developer | Freelancer 
+                    <span>
+                    Software 
+                    </span>
+                    <span>
+                    Engineer 
+                    </span>
+                    <span>
+                    | 
+                    </span>
+                    <span>
+                    Web 
+                    </span>
+                    <span>
+                    Developer 
+                    </span>
+                    <span>
+                    | 
+                    </span>
+                    <span>
+                    Freelancer 
+                    </span>
                 </h4>
 
                 <section className="social-media">
