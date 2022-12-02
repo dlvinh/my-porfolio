@@ -12,9 +12,10 @@ export default function Navbar() {
     transition={
       {duration: 0.5}
     }
+    initial="closed"
     variants={{
-      open: {  x: 0, maxHeight:"fit-content" },
-      closed: {maxHeight: "70px" , opacity:0.7},
+      open: {  x: 0, height: "fit-content",opacity: 1 },
+      closed: {height: "70px" , opacity:0.7},
     }}
      >
       <ul>
