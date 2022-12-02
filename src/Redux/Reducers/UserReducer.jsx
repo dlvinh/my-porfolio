@@ -10,7 +10,9 @@ const defaultUserState ={
         userEmail:"",
         userLanguages: [],
         userName: ""
-    }
+    },
+    endorsementList:[
+    ]
 }
 
 export const UserStateReducer = createSlice({
@@ -32,6 +34,13 @@ export const UserStateReducer = createSlice({
             return state = {
                 ...state,
                 userInfo: action.payload
+            }
+        },
+        storeUserEndorsementList(state, action){
+            console.log("Store endorsement list", action.payload);
+            return state = {
+                ...state,
+                endorsementList: action.payload
             }
         }
         //===== DECLARE ACTIONs HERE

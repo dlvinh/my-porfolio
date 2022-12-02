@@ -838,7 +838,7 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: var(--text-color);
-  opacity: 1;
+  opacity: 0.2;
 }
 
 input:autofill,
@@ -876,10 +876,11 @@ textarea {
   margin: 0;
   align-self: center;
   letter-spacing: 1.2px;
+  width: 100%;
 }
 
 /* Blockquote header */
-.blockquote h1 {
+.blockquote .blockquote--content{
   font-family: "Handlee", cursive;
   position: relative;
   /* for pseudos */
@@ -896,7 +897,7 @@ textarea {
 }
 
 /* Blockquote right double quotes */
-.blockquote h1:after {
+.blockquote .blockquote--content:after {
   content: "";
   position: absolute;
   border: 5px solid var(--border-color);
@@ -910,7 +911,7 @@ textarea {
   z-index: 3;
 }
 
-.blockquote h1:before {
+.blockquote .blockquote--content:before {
   content: "";
   position: absolute;
   width: 80px;
@@ -922,30 +923,44 @@ textarea {
 
 /* increase header size after 600px */
 @media all and (min-width: 600px) {
-  .blockquote h1 {
+  .blockquote .blockquote--content{
     font-size: 2rem;
     line-height: 1.2;
+    text-align: justify;
   }
 }
 
 /* Blockquote subheader */
-.blockquote h4 {
+
+.blockquote .blockquote--footer {
   position: relative;
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 1.3rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.8;
   margin: 0;
   padding-top: 15px;
   z-index: 1;
-  margin-left: 150px;
+  margin-left: 15%;
   padding-left: 12px;
+  
+}
+.blockquote--footer .author{
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.blockquote--footer > a:hover{
+  color: var(--border-color);
 }
 
-.blockquote h4:first-letter {
-  margin-left: -12px;
-}
 
+.blockquote--footer .jobTitle{
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+}
 /* Custome react slick */
 .my-slider .slick-dots li button:before {
   font-size: 10px;

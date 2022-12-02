@@ -13,8 +13,8 @@ export default function Navbar() {
       {duration: 0.5}
     }
     variants={{
-      open: {  x: 0 },
-      closed: {height: "70px" , opacity:0.7},
+      open: {  x: 0, maxHeight:"fit-content" },
+      closed: {maxHeight: "70px" , opacity:0.7},
     }}
      >
       <ul>

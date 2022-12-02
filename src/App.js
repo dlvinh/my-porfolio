@@ -28,7 +28,7 @@ function App() {
     // <AnimatePresence>
     <Routes location={location} key={location.pathname}>
       <Route element={<Layout ></Layout>}>
-        <Route path="*" element={<Navigate to="/home"></Navigate>}></Route>
+        <Route path="*" element={<Navigate to="/Home"></Navigate>}></Route>
         <Route path="/Home" element={<Home></Home>}></Route>
         <Route element={<SideContent ></SideContent>}>
           <Route path="/AboutMe" element={<AboutMe></AboutMe>}></Route>

@@ -57,19 +57,26 @@ export async function getCommentList(){
 }
 
 export function getUserInfo(){
-  const app = initializeApp(firebaseConfig);
+  const app  = initializeApp(firebaseConfig);
   const database = getFirestore(app);
   console.log("run get user info")
   return async function getInfo(dispatch, getState){
     try{
-      const result = await getDoc(doc(database, "users/user-info"));
-      // console.log(querySnapshot.data());
-      dispatch(reducerActions.storeUserInfo(
-        result.data()
+      const list= [];
+      const userInfo = await getDoc(doc(database, "users/user-info"));
+      const endorsementList= await getDocs(collection(database,"/users/endorsement/endorsementList"));
+      endorsementList.forEach((item)=>{
+        list.push(item.data());
+      })
+      await dispatch(reducerActions.storeUserInfo(
+        userInfo.data() 
       ))
+      await dispatch(reducerActions.storeUserEndorsementList(
+        list
+      ))
+
   }catch(err){
       console.log(err)
     }
   }
- 
 }

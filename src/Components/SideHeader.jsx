@@ -12,7 +12,6 @@ export default function SideHeader() {
     return state.UserState;
   });
   const dispatch = useDispatch();
-  const [urlState, setUrlState] = useState("");
   useEffect(() => {
     if (!image || !resume) {
       dispatch(initialFirebaseApp());
@@ -31,47 +30,48 @@ export default function SideHeader() {
       }}
       exit={{ opacity: 0 }}
     >
-        <img className="avatar mb-5" alt="..." src={image} />
-        <div className="header-content">
-          <h2 className="title">Duc Vinh Le</h2>
-          <h3 className="subtitle">Software Engineer | Web Developer | Freelancer</h3>
-          <section className="social-media my-4">
-            <a
-              className="hyperlink"
-              href="https://linkedin.com/in/duc-vinh-le-76ba091aa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <i className="icon fab fa-linkedin-in"></i>
-            </a>
-            <a
-              className="hyperlink"
-              href="http://m.me/ducvinh.le.39"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="icon fab fa-facebook-f"></i>
-            </a>
-            <a
-              className="hyperlink"
-              href="https://www.instagram.com/leevinh_195"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="icon fab fa-instagram"></i>
-            </a>
-          </section>
-        </div>
-        <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={resume}
-                className="my-btn btn-download my-4"
-            >
-               Download My RESUME
-            </a>
-  
+      <img className="avatar mb-5" alt="..." src={image} />
+      <div className="header-content">
+        <h2 className="title">Duc Vinh Le</h2>
+        <h3 className="subtitle">
+          Software Engineer | Web Developer | Freelancer
+        </h3>
+        <section className="social-media my-4">
+          <a
+            className="hyperlink"
+            href="https://linkedin.com/in/duc-vinh-le-76ba091aa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <i className="icon fab fa-linkedin-in"></i>
+          </a>
+          <a
+            className="hyperlink"
+            href="http://m.me/ducvinh.le.39"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="icon fab fa-facebook-f"></i>
+          </a>
+          <a
+            className="hyperlink"
+            href="https://www.instagram.com/leevinh_195"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="icon fab fa-instagram"></i>
+          </a>
+        </section>
+      </div>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={resume}
+        className="my-btn btn-download my-4"
+      >
+        My RESUME
+      </a>
     </motion.section>
   );
 }

@@ -9,12 +9,16 @@ import { useEffect } from "react";
 import { getUserInfo } from "../Services/FirebaseService";
 
 export default function AboutMe() {
-  const { userInfo } = useSelector((state) => {
+  const { userInfo,endorsementList } = useSelector((state) => {
+    console.log(state.UserState.endorsementList)
     return state.UserState;
   });
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getUserInfo());
+    const getData = async()=>{
+      await dispatch(getUserInfo());
+    }
+   getData();
   }, []);
   return (
     <motion.section
@@ -105,37 +109,38 @@ export default function AboutMe() {
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-bootstrap.svg"
+            src={process.env.PUBLIC_URL+"/assets/logos/icons8-bootstrap.svg"}
           ></img>
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-css3.svg"
+            // src=".my-porfolio/assets/logos/icons8-css3.svg"
+              src={process.env.PUBLIC_URL+"/assets/logos/icons8-css3.svg"}
           ></img>
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-figma.svg"
+            src={process.env.PUBLIC_URL+"/assets/logos/icons8-figma.svg"}
           ></img>
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-html-5.svg"
+            src={process.env.PUBLIC_URL+"/assets/logos/icons8-html-5.svg"}
           ></img>
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-javascript.svg"
+          src={process.env.PUBLIC_URL+"/assets/logos/icons8-javascript.svg"}
           ></img>
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-react.svg"
+            src={process.env.PUBLIC_URL+"/assets/logos/icons8-react.svg"}
           ></img>
           <img
             className="skill-logo"
             alt="bootstrap"
-            src="./assets/logos/icons8-redux.svg"
+            src={process.env.PUBLIC_URL+"/assets/logos/icons8-redux.svg"}
           ></img>
         </div>
       </section>
@@ -154,8 +159,7 @@ export default function AboutMe() {
           Endorsements
         </h3>
       </em>
-
-      <Carousel></Carousel>
+      <Carousel endorsementList={endorsementList} ></Carousel>
     </motion.section>
   );
 }

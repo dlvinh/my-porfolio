@@ -2,11 +2,12 @@ import React from 'react'
 import Slider from "react-slick";
 import Quote from '../Components/Quote';
 
-export default function Carousel() { 
+export default function Carousel({endorsementList}) { 
+  console.log("carousel",endorsementList)
     var settings = {
         dots: true,
         infinite: true,
-        speed: 2000,
+        speed:1000,
         slidesToShow: 1,
         className: "my-slider",
         slidesToScroll: 1,
@@ -44,15 +45,9 @@ export default function Carousel() {
       };
   return (
     <Slider {...settings}>
-    <div>
-        <Quote></Quote>
-    </div>
-    <div>
-        <Quote></Quote>
-    </div>
-    <div>
-    <Quote></Quote>
-    </div>
+    {endorsementList?.map((item,index)=>{
+      return <Quote key={index}   content={item.content} hyperlink={item.hyperlink} author={item.author} jobTitle={item.occupationTitle}></Quote>
+    })}
   </Slider>
   )
 }

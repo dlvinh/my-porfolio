@@ -101,7 +101,7 @@ export default function Home() {
                 href={resume}
                 className="my-btn btn-download my-4"
             >
-               Download My RESUME
+               My RESUME
             </a>
         </motion.section>
     );
