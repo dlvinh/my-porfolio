@@ -45,19 +45,13 @@ export default function Home() {
                 <h1 className="my-4 title partial--border">Duc Vinh Le</h1>
                 <h4 className="my-4 font-weight-light subtitle">
                     <span>
-                    Software 
-                    </span>
-                    <span>
-                    Engineer 
+                    Software Engineer 
                     </span>
                     <span>
                     | 
                     </span>
                     <span>
-                    Web 
-                    </span>
-                    <span>
-                    Developer 
+                    Web Developer 
                     </span>
                     <span>
                     | 

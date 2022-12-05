@@ -45,10 +45,10 @@ export async function getCommentList(){
   const database = getFirestore(app);
   try{
     const querySnapshot = await getDocs(query(collection(database, "users/user-comments/comment-list")));
-    console.log(querySnapshot);
+    // console.log(querySnapshot);
     querySnapshot.forEach((doc) =>  {
         console.log(doc.data());
-    console.log(`${doc.id} => ${doc.data()}`);
+    // console.log(`${doc.id} => ${doc.data()}`);
   });
 
 }catch(err){
@@ -59,7 +59,7 @@ export async function getCommentList(){
 export function getUserInfo(){
   const app  = initializeApp(firebaseConfig);
   const database = getFirestore(app);
-  console.log("run get user info")
+  // console.log("run get user info")
   return async function getInfo(dispatch, getState){
     try{
       const list= [];

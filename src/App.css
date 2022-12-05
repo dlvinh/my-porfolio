@@ -120,14 +120,17 @@
 
 .underline::after {
   content: "";
+  padding: 10px;
   position: absolute;
   left: 0;
   bottom: -5px;
   width: 100%;
-  border-bottom: 4px solid var(--text-highlighted-color);
+  clip-path: polygon(0 0%, 64% 60%, 100% 100%, 0% 100%);
+  border-bottom: 7px solid var(--text-highlighted-color);
   animation: underline-animation ease-out 2s;
   animation-delay: 0.5s;
 }
+
 
 @keyframes underline-animation {
   0% {
@@ -263,11 +266,29 @@
   transition: transform 0.75s;
   padding: 5px 5px;
   cursor: default;
+  position: relative;
+  /* overflow: hidden; */
 }
 .home__middle .subtitle span:hover{
-    transform: translateY(-20px);
+    transform: translateY(-50%);
 }
-
+.home__middle .subtitle span:after{
+  content: "1 Year";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,100%);
+  opacity: 0;
+  transition: opacity 0.75s;
+  white-space: nowrap;
+}
+.home__middle .subtitle span:hover::after{
+color: #ce4257;
+position: absolute;
+left: 50%;
+opacity: 1;
+/* transform: translateX(-50%);
+transform: translateY(70%); */
+}
 .btn-download {
   /* width: fit-content; */
   min-width: 300px;
