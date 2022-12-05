@@ -23,6 +23,19 @@ export default function Experience() {
 
         <card className="card my-card-style card-container">
           <div className="card-front card-body d-flex flex-column justify-content-center align-items-center">
+            <h4 className="card-title title text-center">HAT Space <p>(in process)</p></h4>
+          </div>
+
+          <div className="card-back card-body d-flex flex-column justify-content-between align-items-center">
+            <p className="card-text card-height my-4 text-justify">
+              With HATSpace we aim to explore and address various pain points related to the current property renting process in Australia. We want to provide tenants, home owners and agents with tools to simplify their processes and create visibilities with every steps involved. We want to create an environment where everyone collaborate, is treated fairly and protected under the law. With HATspace, everyone is a winner!
+            </p>
+            <button className="my-btn card-btn">Try Demo</button>
+          </div>
+        </card>
+
+        <card className="card my-card-style card-container">
+          <div className="card-front card-body d-flex flex-column justify-content-center align-items-center">
             <h4 className="card-title title text-center">
               Spotify - Mini Project
             </h4>
@@ -52,6 +65,8 @@ export default function Experience() {
             <button className="my-btn card-btn">Try Demo</button>
           </div>
         </card>
+
+        
       </div>
     </Fragment>
   );

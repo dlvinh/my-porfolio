@@ -48,9 +48,12 @@ export default function AboutMe() {
               <em className="emphasis">Nearly One year</em> in developing <em className="emphasis">FrontEnd</em> with <em className="emphasis">React JS</em>
             </li>
             <li>
+              Strong experience in 
+              <em className="emphasis"> HTML-CSS-Javascript</em>
+            </li>
+            <li>
               My passion is{" "}
-              <em className="emphasis">Programming, and Web Developing</em> I'm
-              currently a Front-End Developer in React JS
+              <em className="emphasis">Programming, and Web Developing</em>
             </li>
             <li>
               My dream is to become a professional{" "}
@@ -61,6 +64,9 @@ export default function AboutMe() {
               I'm graduated{" "}
               <em className="emphasis">Master of Information Technology</em> in{" "}
               Monash University Australia
+            </li>
+            <li>
+              Currently working in warehouse and by night developing an application using  <em className="emphasis">Flutter</em>  with a small team
             </li>
            
            

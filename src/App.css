@@ -122,11 +122,12 @@
   content: "";
   padding: 10px;
   position: absolute;
-  left: 0;
+  left: -5px;
   bottom: -5px;
   width: 100%;
+  border-radius: 25px;
   clip-path: polygon(0 0%, 64% 60%, 100% 100%, 0% 100%);
-  border-bottom: 7px solid var(--text-highlighted-color);
+  border-bottom: 5px solid var(--border-color);
   animation: underline-animation ease-out 2s;
   animation-delay: 0.5s;
 }
