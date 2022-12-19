@@ -37,7 +37,7 @@ export default function Home() {
             }}
         >
             <img
-                className="avatar large--avatar"
+                className="avatar large--avatar small--avatar"
                 alt="This is my avatar"
                 src={image}
             />
@@ -93,9 +93,17 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={resume}
-                className="my-btn btn-download my-4"
+                className="my-btn btn-download btn--normal my-4"
             >
                My RESUME
+            </a>
+
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={resume}
+                className="my-btn btn--float my-4"
+            >
             </a>
         </motion.section>
     );

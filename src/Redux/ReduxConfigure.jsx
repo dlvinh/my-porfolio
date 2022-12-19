@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { FireStoreReducer } from "./Reducers/FireStoreReducer";
 import  {UserStateReducer}  from "./Reducers/UserReducer";
-import  thunkMiddleware from "redux-thunk";
 import { NavReducer } from "./Reducers/NavReducer";
 
 

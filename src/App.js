@@ -30,7 +30,7 @@ function App() {
     <Routes  location={location} key={location.pathname}>
       <Route basename="my-porfolio" element={<Layout ></Layout>}>
         <Route path="*" element={<Navigate to="/Home"></Navigate>}></Route>
-        <Route path="/Home" element={<Home></Home>}></Route>
+        <Route path="/Home" element={ <Home></Home>}></Route>
         <Route element={<SideContent ></SideContent>}>
           <Route path="/AboutMe" element={<AboutMe></AboutMe>}></Route>
           <Route path="/Resume" element={<Resume></Resume>}></Route>
