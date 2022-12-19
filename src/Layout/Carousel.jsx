@@ -14,14 +14,14 @@ export default function Carousel({endorsementList}) {
         arrows: false,
         centerPadding: "10px",
         autoplay: true,
-        autoplaySpeed: 1000000,
+        autoplaySpeed: 4000,
         cssEase: "ease-in-out",
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+              slidesToShow: 1,
+              slidesToScroll: 1,
               infinite: true,
               dots: true,
             },
@@ -29,9 +29,9 @@ export default function Carousel({endorsementList}) {
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1,
             },
           },
           {
