@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
 export default function Navbar() {
-  console.log("click here");
   const [showNav, setShowNav] = useState(false);
   return (
     <motion.nav className= "nav-bar"

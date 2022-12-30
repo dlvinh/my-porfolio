@@ -36,17 +36,20 @@
 
 .my-btn {
   background-color: var(--button-color);
-  color: white;
-  border: 3px white solid;
-  width: auto;
-  height: auto;
   border-radius: 50px;
+  border: 3px white solid;
+  color: white;
+  cursor: pointer;
   font-size: 1.15rem;
   font-weight: 700;
+  height: auto;
+  min-width: 300px;
+  overflow: hidden;
   padding: 10px 20px;
-  cursor: pointer;
-  transition: all 0.25s;
+  position: relative;
   text-transform: uppercase;
+  transition: all 0.25s;
+  width: auto;
 }
 
 .btn--large {
@@ -290,15 +293,8 @@ opacity: 1;
 /* transform: translateX(-50%);
 transform: translateY(70%); */
 }
-.btn-download {
-  /* width: fit-content; */
-  min-width: 300px;
-  margin-top: 1rem;
-  position: relative;
-  overflow: hidden;
-}
 
-.btn-download::before {
+.btn--normal::before {
   content: "\f358";
   font-family: FontAwesome;
   display: flex;
@@ -315,11 +311,11 @@ transform: translateY(70%); */
   transition: all 0.2s linear 0s;
   text-align: center; 
 }
-.btn-download:hover::before{
+.btn--normal:hover::before{
   right: 10px;
   text-indent: 0;
 }
-.btn-download:hover {
+.btn--normal:hover {
   text-indent: -50px;
 }
 
@@ -335,6 +331,19 @@ transform: translateY(70%); */
   padding: 0;
   overflow: hidden;
   display: none;
+  margin: 2rem 0;
+  transition: 0.5s;
+}
+
+.btn--float:hover{
+  width: 300px
+}
+
+.btn--float:hover::before{
+  content: "My Resume";
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 1.5rem;
 }
 .btn--float::before {
   content: "\f358";
@@ -343,7 +352,7 @@ transform: translateY(70%); */
   align-items: center;
   justify-content: center;
   top: 0;
-  scale: 2.5;
+  font-size: 2.5rem;
   height: 105%;
   /* background-color: var(--primary-color); */
   border-radius: 0px 6px 6px 0px;
@@ -836,46 +845,22 @@ transform: translateY(70%); */
 }
 
 .card-btn {
-  width: 80%;
+  min-width: 80%;
+  margin: 0 auto;
 }
 
 /* CONTACT */
-.effect--sending{
+.sending--effect{
+  
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.effect--sending::before,
-.effect--sending::after{
-  content: "\f1d8";
-font-family: FontAwesome;
-color: var(--primary-color);
-position: absolute;
-scale: 1.5;
-transition: transform .75s ease-in-out;
-}
-.effect--sending::before{
-  left: -20%;
-  opacity: 0;
-}
-.effect--sending:hover::before{
-  opacity: 1;
-  transform: translateX(1300%);
-  display: inline-block;
-}
-.effect--sending::after{
-  /* transition-delay: 1s; */
 
-  opacity: 1;
-  left: 100%;
-   transform: translateX(60px);
-}
-.effect--sending:hover::after{
-  opacity: 0;
-  left: 100%;
-  transform: translateX(-350%);
+.btn--submit::before{
+  content: "\f1d8";
 }
 
 

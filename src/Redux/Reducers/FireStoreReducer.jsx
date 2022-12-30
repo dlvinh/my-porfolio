@@ -14,8 +14,8 @@ export const FireStoreReducer = createSlice({
     reducers:{
         //===== DECLARE ACTIONs HERe
         storeFile(state,action){
-            console.log("Store App");
-            console.log(action.payload);
+            // console.log("Store App");
+            // console.log(action.payload);
             return state = {storage:(action.payload.storage),
                  app: ( action.payload.app)};
         }

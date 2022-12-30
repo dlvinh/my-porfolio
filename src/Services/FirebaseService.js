@@ -80,3 +80,24 @@ export function getUserInfo(){
     }
   }
 }
+
+export function getProjectList(){
+  const app= initializeApp(firebaseConfig);
+  const database = getFirestore(app);
+  return async function getList(dispatch,getState){
+    try{
+      const list=[];
+      const projectList = await getDocs(collection(database,"/projectList"));
+      projectList.forEach((item)=>{
+        list.push(item.data());
+      })
+
+      await(dispatch(reducerActions.storeUserProjectList(
+        list
+      )))
+      console.log("projectList",list);
+    }catch(err){
+      console.log(err);
+    }
+  }
+}

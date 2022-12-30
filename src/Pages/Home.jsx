@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import style from "../Styles/HomePageStyle.module.css";
 import { } from "firebase/storage";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { initialFirebaseApp } from "../Services/FirebaseService";
 import { } from "firebase/app";
+import NormalBtn from "../Utilities/NormalBtn";
 
 export default function Home() {
     const { storage, app } = useSelector((state) => {
@@ -89,14 +89,7 @@ export default function Home() {
                     </a>
                 </section>
             </div>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={resume}
-                className="my-btn btn-download btn--normal my-4"
-            >
-               My RESUME
-            </a>
+            <NormalBtn resume={resume}></NormalBtn>
 
             <a
                 target="_blank"

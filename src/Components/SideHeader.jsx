@@ -1,14 +1,14 @@
-import { getDownloadURL, ref } from "firebase/storage";
-import React, { useEffect, useState } from "react";
-import { motion, usePresence } from "framer-motion";
+
+import React, { useEffect  } from "react";
+import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  getAvatarAndResumeUrl,
+
   initialFirebaseApp,
 } from "../Services/FirebaseService";
+import NormalBtn from "../Utilities/NormalBtn";
 export default function SideHeader() {
   const { image, resume } = useSelector((state) => {
-    console.log(state.UserState);
     return state.UserState;
   });
   const dispatch = useDispatch();
@@ -64,14 +64,7 @@ export default function SideHeader() {
           </a>
         </section>
       </div>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href={resume}
-        className="my-btn btn-download my-4"
-      >
-        My RESUME
-      </a>
+      <NormalBtn resume={resume}></NormalBtn>
     </motion.section>
   );
 }

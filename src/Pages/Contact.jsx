@@ -37,40 +37,8 @@ export default function Contact() {
       }}
       >
       <em><h3 className='mb-5 title title--large underline'>Contact <span className='title title--large text--highlighted'>Me!</span></h3></em>
-      <div className='row'>
-      <div className="contact-left col-4 d-flex flex-column justify-content-center align-items-center">
-        <div className='flip-card'>
-          <div className='flip-card-inner'>
-          <div className='card-front'>
-          <h4 className='title m-0 '>Address</h4>
-          </div>
-           <div className='card-back'>
-            <p className=''>Melbourne Australia</p>
-           </div>
-          </div>
-        </div>
-        <div className='flip-card'>
-        <div className='flip-card-inner'>
-          <div className='card-front'>
-          <h4 className='title m-0'>Phone</h4>
-          </div>
-           <div className='card-back'>
-            <p>+61 433906789</p>
-           </div>
-          </div>
-        </div>
-        <div className='flip-card'>
-        <div className='flip-card-inner'>
-          <div className='card-front'>
-          <h4 className='title m-0'>Email</h4>
-          </div>
-           <div className='card-back'>
-            <p>vinhxp95@gmai.com</p>
-           </div>
-          </div>
-        </div>
-      </div>
-      <div className='contact-right col-8'>
+
+      <div className='contact-right'>
         <form className='d-flex flex-column' onSubmit={handleSubmit}>
           <label for="name">Name</label>
           <input type="text" id='name' name='name' placeholder='Please enter your name' required></input>
@@ -90,9 +58,8 @@ export default function Contact() {
         field="message"
         errors={state.errors}
       />
-          <button type='submit' disabled={state.submitting} className='my-btn effect--sending border-running-effect mt-3 m-auto btn--small'>{state.submitting? <><Spinner animation="border"  variant="info" size="md" /><p className='text-info'>Sending...</p></> : "Send Message"}</button>
+          <button type='submit' disabled={state.submitting} className='my-btn btn--normal btn--submit mt-3 m-auto btn--small'>{state.submitting? <><Spinner animation="border"  variant="info" size="md" /><p className='text-info'>Sending...</p></> : "Send Message"}</button>
         </form>
-      </div>
       </div>
     </motion.section>
 

@@ -12,6 +12,9 @@ const defaultUserState ={
         userName: ""
     },
     endorsementList:[
+    ],
+    projectList:[
+
     ]
 }
 
@@ -20,7 +23,7 @@ export const UserStateReducer = createSlice({
     initialState: defaultUserState,
     reducers:{
         storeImageAndResume(state,action){
-            console.log("Store Avatar");
+            // console.log("Store Avatar");
             // console.log(action.payload);
             return state = {
                 ...state,
@@ -29,7 +32,7 @@ export const UserStateReducer = createSlice({
             };
         },
         storeUserInfo(state, action){
-            console.log("Store User Info", action);
+            // console.log("Store User Info", action);
             
             return state = {
                 ...state,
@@ -37,10 +40,17 @@ export const UserStateReducer = createSlice({
             }
         },
         storeUserEndorsementList(state, action){
-            console.log("Store endorsement list", action.payload);
+            // console.log("Store endorsement list", action.payload);
             return state = {
                 ...state,
                 endorsementList: action.payload
+            }
+        },
+        storeUserProjectList(state, action){
+            console.log("StoreProjectList", action.payload);
+            return state={
+                ...state,
+                projectList: action.payload
             }
         }
         //===== DECLARE ACTIONs HERE
