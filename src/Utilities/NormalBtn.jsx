@@ -6,7 +6,7 @@ function NormalBtn(props) {
     target="_blank"
     rel="noopener noreferrer"
     href={props.resume}
-    className="my-btn btn--normal"
+    className="my-btn btn--normal mt-4"
 >
    My RESUME
 </a>

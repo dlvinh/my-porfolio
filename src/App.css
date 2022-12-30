@@ -493,6 +493,14 @@ transform: translateY(70%); */
   background-color: #ffd6a5;
 }
 
+@media all and (max-width: 400px) {
+  .content-area{
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  
+}
+
 /* ===== NAVBAR ==== */
 .nav-bar {
   background-color: whitesmoke;
@@ -997,16 +1005,19 @@ textarea {
   position: relative;
   /* for pseudos */
   color: var(--secondary-color);
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: 1.5px;
   margin: 0;
   border: 2px solid #fff;
   border: solid 5px var(--border-color);
   border-radius: 20px;
   padding: 25px;
+  text-align: justify;
 }
+
+
 
 /* Blockquote right double quotes */
 .blockquote .blockquote--content:after {
@@ -1033,14 +1044,7 @@ textarea {
   z-index: 2;
 }
 
-/* increase header size after 600px */
-@media all and (min-width: 600px) {
-  .blockquote .blockquote--content{
-    font-size: 2rem;
-    line-height: 1.2;
-    text-align: justify;
-  }
-}
+
 
 /* Blockquote subheader */
 
@@ -1054,8 +1058,7 @@ textarea {
   padding-top: 15px;
   z-index: 1;
   margin-left: 15%;
-  padding-left: 12px;
-  
+  padding-left: 50px;
 }
 .blockquote--footer .author{
   color: var(--text-color);
@@ -1073,6 +1076,33 @@ textarea {
   text-transform: capitalize;
   letter-spacing: 5px;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .blockquote .blockquote--content{
+    font-size: 1.8rem;
+  }
+}
+
+/* increase header size after 600px */
+@media all and (max-width: 600px) {
+  .blockquote .blockquote--content{
+    font-size: 1.2rem;
+    position: initial;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-width: 2px;
+  }
+  .blockquote .blockquote--content::after{
+    display: none;
+  }
+  .blockquote .blockquote--footer, .blockquote-wrapper{
+    padding: 0;
+  }
+  
+}
+
+
 /* Custome react slick */
 .my-slider .slick-dots li button:before {
   font-size: 10px;
@@ -1080,6 +1110,10 @@ textarea {
 
 .my-slider li.slick-active button:before {
   color: white !important;
+}
+
+.slick-list{
+  transition: height 1.5s ease;
 }
 
 /* LOADING ANiMATION */

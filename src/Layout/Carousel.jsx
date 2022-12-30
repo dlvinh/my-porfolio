@@ -5,6 +5,7 @@ import Quote from '../Components/Quote';
 export default function Carousel({endorsementList}) { 
   console.log("carousel",endorsementList)
     var settings = {
+        adaptiveHeight: true,
         dots: true,
         infinite: true,
         speed:1000,
@@ -14,6 +15,7 @@ export default function Carousel({endorsementList}) {
         arrows: false,
         centerPadding: "10px",
         autoplay: true,
+        pauseOnHover: true,
         autoplaySpeed: 4000,
         cssEase: "ease-in-out",
         responsive: [
